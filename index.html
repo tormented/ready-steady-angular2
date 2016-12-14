@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Angular2</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Ready, steady, Angular2</h1>
+	</header>
+	<section class="slide white" id="home">
+		<p class="ready">Ready,</p>
+		<p class="steady">steady,</p>
+		<img src="pictures/slide1/angular2.png" alt="" class="cover w h">
+		<h3>
+			<i>by Vitaliy Melnik</i>
+		</h3>
+		<style>
+			#home p {
+				color: #fff;
+				position: absolute;
+				font-size: 66px;
+			}
+
+			#home .ready {
+				top: 0;
+				left: 240px;
+			}
+
+			#home .steady {
+				top: 70px;
+				left: 290px;
+			}
+
+			#home h3 {
+				position: absolute;
+				bottom: 70px;
+				right: 50px;
+				color: #fff;
+				font-size: 36px;
+			}
+		</style>
+	</section>
+	<section class="slide" id="history">
+		<h2>History</h2>
+		<img class="avatar next" src="pictures/slide2/avanar.jpg" alt="" width="200" height="300"/>
+		<img class="habr next" src="pictures/slide2/2008%20voit.png" alt="" width="300" height="300"/>
+		<img class="devs next" src="pictures/slide2/angular-devs.jpg" alt="" height="400"/>
+		<style type="text/css">
+			#history img {
+				position: absolute;
+				margin-top: 30px;
+			}
+
+			.avatar {
+				transform: rotate(-30deg);
+			}
+
+			.habr {
+				right: 150px;
+				transform: rotate(10deg);
+			}
+
+			#history .devs {
+				margin-top: 0;
+				left: 150px;
+			}
+		</style>
+	</section>
+	<section class="slide" id="principles">
+		<h2 class="shout grow">Angular 1.x</h2>
+		<div class="content next">
+			<h2>Angular 1.x</h2>
+			<ul>
+				<li>$scope</li>
+				<li>Directives</li>
+				<li>Services</li>
+				<li>Dependency Injections</li>
+				<li>Two-way data binding</li>
+			</ul>
+		</div>
+		<style type="text/css">
+			.content {
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				position: relative;
+			}
+		</style>
+	</section>
+	<section class="slide" id="angularExamples">
+		<h2>How it was...</h2>
+		<img class="shot1" src="pictures/slide3/shot1.PNG" alt=""/>
+		<img class="shot2 next" src="pictures/slide3/shot4.PNG" alt=""/>
+		<img class="shot2 next" src="pictures/slide3/shot2.PNG" alt=""/>
+		<img class="next" src="pictures/slide3/shot3.PNG" alt=""/>
+		<style>
+			#angularExamples img {
+				position: absolute;
+			}
+
+			#angularExamples .shot2 {
+				right: 50px;
+			}
+		</style>
+	</section>
+	<section class="slide white" id="forget">
+		<h2 class="shout grow" style="color: #fff;">Forget it!</h2>
+		<img src="pictures/slide4/forget.png" alt="" class="cover w h"/>
+	</section>
+	<section class="slide" id="angular2">
+		<h2 style="margin-top: 150px">Angular 2.0 has came ...</h2>
+		<h2 style="text-align: right; font-size: 36px;" class="next">and brought new view in web apps development</h2>
+	</section>
+	<section class="slide" id="architecture">
+		<h2>Architecture</h2>
+		<img src="pictures/slide7/architecture.png" alt=""/>
+	</section>
+	<section class="slide" id="angular2features">
+		<h2>Angular 2 main features:</h2>
+		<ul>
+			<li class="next">"Develop Across All Platforms"&copy;</li>
+			<li class="next">Angular 2 components based on web components</li>
+			<li class="next">Using shadow DOM</li>
+			<li class="next">ES6, TypeScript, Dart</li>
+			<li class="next">RxJS</li>
+			<li class="next">Zone.js</li>
+		</ul>
+	</section>
+	<section class="slide" id="otherFeatures">
+		<h2>Other features: </h2>
+		<ul>
+			<li class="next">Animation(trigger, state, style, transition, animate)</li>
+			<li class="next">Style scoping (ViewEncapsulation: Native, None, Emulated)</li>
+			<li class="next">HTTP</li>
+			<li class="next">Dynamic Forms</li>
+			<li class="next">Test environment</li>
+		</ul>
+	</section>
+	<section class="slide" id="component">
+		<h2>Examples: Component</h2>
+		<pre>
+			<code>import { Component } from '@angular/core';</code>
+			<code><mark>@Component</mark>({</code>
+			<code>  selector: 'my-app',</code>
+			<code>  template: "&lt;h1&gt;{{title}}&lt;/h1&gt;"</code>
+			<code>})</code>
+			<code>export class <mark>AppComponent</mark> {</code>
+			<code>  public title:string = 'My awesome Angular 2 component';</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide" id="directive">
+		<h2>Examples: Directive</h2>
+		<pre>
+			<code>import { Directive, ElementRef } from '@angular/core';</code>
+			<code><mark>@Directive</mark>({ selector: '[myHighlight]' })</code>
+			<code>export class <mark>HighlightDirective</mark> {</code>
+			<code>    constructor(el: ElementRef) {</code>
+			<code>       el.nativeElement.style.backgroundColor = 'yellow';</code>
+			<code>    }</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide" id="service">
+		<h2>Examples: Service</h2>
+		<pre>
+			<code>import { Injectable } from '@angular/core';</code>
+			<code><mark>@Injectable</mark>()</code>
+			<code>export class <mark>awesomeService</mark> {</code>
+			<code>    doSmth(){</code>
+			<code>		<span class="comment">//do something</span></code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide" id="pipe">
+		<h2>Examples: Pipe</h2>
+		<pre>
+			<code>import { Pipe, PipeTransform } from '@angular/core';</code>
+			<code><mark>@Pipe</mark>({name: 'exponential'})</code>
+			<code>export class <mark>ExponentialPipe</mark> implements PipeTransform {</code>
+			<code>  transform(value: number, exponent: string): number {</code>
+			<code>    let exp = parseFloat(exponent);</code>
+			<code>    return Math.pow(value, isNaN(exp) ? 1 : exp);</code>
+			<code>  }</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide" id="dataBinding">
+		<h2>Examples: Data Binding</h2>
+		<p>One-way Data Binding</p>
+		<pre>
+			<code>&lt;p&gt;{{user.name}}&lt;/p&gt; - interpolation</code>
+			<code>&lt;img [src]="user.photo"/&gt; - bind property from class</code>
+			<code>&lt;button (click)="submit()"&gt;&lt;/button&gt; - bind event to class</code>
+		</pre>
+		<p>Two-way Data Binding</p>
+		<pre>
+			<code>&lt;input type="text" [(ngModel)]="user.occupation"/&gt;
+		- data binding between view and class</code>
+		</pre>
+	</section>
+	<section class="slide white" id="projectCreating">
+		<h2 style="text-align: center; margin-top: 100px">How to create your own project?</h2>
+		<img src="pictures/slide15/shot7.PNG" alt="" class="next template"/>
+		<img src="pictures/slide15/shot8.PNG" alt="" class="next quickstart"/>
+		<style type="text/css">
+			.template {
+				position: absolute;
+				width: 680px;
+				height: 610px;
+				top: 50px;
+				left: 150px;
+			}
+
+			.quickstart {
+				position: absolute;
+				width: 800px;
+				height: 590px;
+				top: 30px;
+				left: 100px;
+			}
+		</style>
+	</section>
+	<section class="slide white" id="snippets">
+		<h2>Snippets</h2>
+		<img src="pictures/slide15/shot2.PNG" alt="" class="next sublime"/>
+		<img src="pictures/slide15/shot1.PNG" alt="" class="next vscode"/>
+		<img src="pictures/slide15/shot9.PNG" alt="" class="next storm"/>
+
+		<style type="text/css">
+			#snippets img {
+				position: absolute;
+			}
+
+			.sublime {
+				left: 150px;
+			}
+
+			.vscode {
+				height: 500px;
+				left: 630px;
+				top: 120px;
+			}
+
+			.storm {
+				height: 330px;
+				left: 230px;
+			}
+		</style>
+	</section>
+	<section class="slide" id="angularCli">
+		<h2>Angular CLI</h2>
+		<pre>
+			<code>npm install -g angular-cli</code>
+			<code class="next">ng new <mark>%projectName%</mark></code>
+			<code class="next">ng generate <mark>%entity%</mark> <mark>%entityName%</mark></code>
+			<code class="next">ng build</code>
+			<code class="next">ng test</code>
+			<code class="next">ng serve</code>
+			<code class="next">ng ...</code>
+		</pre>
+	</section>
+	<section class="slide" id="conclusions">
+		<h2>Conclusions</h2>
+		<ul>
+			<li class="next">Crossplatform development</li>
+			<li class="next">Multi-language</li>
+			<li class="next">It is fast? Oh yeah!</li>
+			<li class="next">Angular CLI</li>
+		</ul>
+	</section>
+	<section class="slide white" id="fin">
+		<h2 class="shout grow">Questions?</h2>
+	</section>
+	<section class="slide white" id="links">
+		<h2>Links</h2>
+		<ol>
+			<li><a href="https://angular.io/docs/ts/latest/">Documentation</a></li>
+			<li><a href="https://angular.io/docs/ts/latest/quickstart.html">Quickstart</a></li>
+			<li><a href="http://onehungrymind.com/build-a-simple-website-with-angular-2/">Simple app example</a></li>
+			<li><a href="https://johnpapa.net/vscode-ng-snippets/">Snippets</a></li>
+			<li><a href="https://cli.angular.io/">Angular CLI</a></li>
+		</ol>
+	</section>
+	<div class="progress"></div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
